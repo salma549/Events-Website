@@ -13,7 +13,7 @@ const BrowseEvents = () => {
 
   return (
     <div className="p-10">
-      <div className=" mt-10 py-7">
+      <div className="hover:cursor-pointer  py-7">
         <h2 className="text-4xl font-bold text-green-500 ml-10">
           Browse Events By City
         </h2>
@@ -22,7 +22,7 @@ const BrowseEvents = () => {
           {cities.map((city) => (
             <div
               key={city.name}
-              className="bg-black text-white w-44 h-44 flex flex-col justify-center items-center rounded-lg shadow-lg "
+              className="bg-black text-white w-44 h-44 flex flex-col justify-center items-center rounded-lg shadow-lg hover:cursor-pointer"
             >
               <div className="text-5xl animate-zoom">{city.icon}</div>
               <h3 className="mt-4 text-lg font-semibold">{city.name}</h3>

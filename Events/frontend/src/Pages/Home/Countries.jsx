@@ -52,57 +52,106 @@
 
 // export default Countries;
 
+// import React from "react";
+
+// const Countries = () => {
+//   const countries = [
+//     { name: "US", flag: "https://flagcdn.com/us.svg" },
+//     { name: "UK", flag: "https://flagcdn.com/gb.svg" },
+//     { name: "India", flag: "https://flagcdn.com/in.svg" },
+//     { name: "UAE", flag: "https://flagcdn.com/ae.svg" },
+//     { name: "Australia", flag: "https://flagcdn.com/au.svg" },
+//     { name: "Spain", flag: "https://flagcdn.com/es.svg" },
+//     { name: "France", flag: "https://flagcdn.com/fr.svg" },
+//     { name: "China", flag: "https://flagcdn.com/cn.svg" },
+//   ];
+
+//   return (
+//     <div className="px-4 py-8 mt-10">
+//       {/* Heading Section */}
+//       <div className="ml-10 mb-6">
+//         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-500">
+//           Discover Events By Country
+//         </h2>
+//         <p className="text-gray-800 text-sm sm:text-base">
+//           Explore opportunities worldwide
+//         </p>
+//       </div>
+
+//       {/* Countries Grid */}
+//       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 lg:gap-10 mx-auto bg-gray-50 p-4 sm:p-6 rounded-lg shadow-md">
+//         {countries.map((country, index) => (
+//           <div
+//             key={index}
+//             className="relative group bg-black text-white rounded-bl-[40px] p-4 sm:p-5 shadow-lg hover:cursor-pointer hover:scale-105 transition-transform flex flex-col justify-between"
+//           >
+//             {/* Flag */}
+//             <div className="flex justify-center items-center mb-4">
+//               <img
+//                 src={country.flag}
+//                 alt={`${country.name} flag`}
+//                 className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-cover rounded-md"
+//               />
+//             </div>
+
+//             {/* Country Name */}
+//             <div className="text-center">
+//               <p className="text-sm sm:text-base md:text-lg font-semibold">
+//                 {country.name}
+//               </p>
+//             </div>
+
+//             {/* Glow Effect */}
+//             <div className="absolute inset-0 bg-gradient-to-tr from-teal-500 to-blue-500 opacity-0 group-hover:opacity-30 transition-opacity rounded-bl-[40px]"></div>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Countries;
+
+
 import React from "react";
 
 const Countries = () => {
   const countries = [
     { name: "US", flag: "https://flagcdn.com/us.svg" },
-    { name: "UK", flag: "https://flagcdn.com/gb.svg" },
-    { name: "India", flag: "https://flagcdn.com/in.svg" },
-    { name: "UAE", flag: "https://flagcdn.com/ae.svg" },
-    { name: "Australia", flag: "https://flagcdn.com/au.svg" },
-    { name: "Spain", flag: "https://flagcdn.com/es.svg" },
-    { name: "France", flag: "https://flagcdn.com/fr.svg" },
-    { name: "China", flag: "https://flagcdn.com/cn.svg" },
+        { name: "UK", flag: "https://flagcdn.com/gb.svg" },
+        { name: "India", flag: "https://flagcdn.com/in.svg" },
+        { name: "UAE", flag: "https://flagcdn.com/ae.svg" },
+        { name: "Australia", flag: "https://flagcdn.com/au.svg" },
+        { name: "Spain", flag: "https://flagcdn.com/es.svg" },
+        { name: "France", flag: "https://flagcdn.com/fr.svg" },
+        { name: "China", flag: "https://flagcdn.com/cn.svg" },
   ];
-
   return (
-    <div className="px-4 py-8 mt-10">
+    <div className="px-4 py-8 mt-10 bg-white min-h-screen">
       {/* Heading Section */}
       <div className="ml-10 mb-6">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-500">
-          Discover Events By Country
-        </h2>
-        <p className="text-gray-800 text-sm sm:text-base">
-          Explore opportunities worldwide
-        </p>
+        <h2 className="text-3xl font-bold text-gray-800">Discover Events By Country</h2>
+        <p className="text-gray-600 text-base">Explore opportunities worldwide</p>
       </div>
 
       {/* Countries Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 lg:gap-10 mx-auto bg-gray-50 p-4 sm:p-6 rounded-lg shadow-md">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 px-4">
         {countries.map((country, index) => (
           <div
             key={index}
-            className="relative group bg-black text-white rounded-bl-[40px] p-4 sm:p-5 shadow-lg hover:cursor-pointer hover:scale-105 transition-transform flex flex-col justify-between"
+            className="bg-gray-100 rounded-xl overflow-hidden shadow-lg transition-transform hover:scale-105"
           >
             {/* Flag */}
-            <div className="flex justify-center items-center mb-4">
-              <img
-                src={country.flag}
-                alt={`${country.name} flag`}
-                className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-cover rounded-md"
-              />
-            </div>
+            <img
+              src={country.flag}
+              alt={`${country.name} flag`}
+              className="w-full h-28 sm:h-32 object-cover rounded-t-xl"
+            />
 
             {/* Country Name */}
-            <div className="text-center">
-              <p className="text-sm sm:text-base md:text-lg font-semibold">
-                {country.name}
-              </p>
+            <div className="text-center py-2">
+              <p className="text-gray-800 text-base font-medium">{country.name}</p>
             </div>
-
-            {/* Glow Effect */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-teal-500 to-blue-500 opacity-0 group-hover:opacity-30 transition-opacity rounded-bl-[40px]"></div>
           </div>
         ))}
       </div>
