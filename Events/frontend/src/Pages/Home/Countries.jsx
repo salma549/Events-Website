@@ -118,24 +118,27 @@ import React from "react";
 const Countries = () => {
   const countries = [
     { name: "US", flag: "https://flagcdn.com/us.svg" },
-        { name: "UK", flag: "https://flagcdn.com/gb.svg" },
-        { name: "India", flag: "https://flagcdn.com/in.svg" },
-        { name: "UAE", flag: "https://flagcdn.com/ae.svg" },
-        { name: "Australia", flag: "https://flagcdn.com/au.svg" },
-        { name: "Spain", flag: "https://flagcdn.com/es.svg" },
-        { name: "France", flag: "https://flagcdn.com/fr.svg" },
-        { name: "China", flag: "https://flagcdn.com/cn.svg" },
+    { name: "UK", flag: "https://flagcdn.com/gb.svg" },
+    { name: "India", flag: "https://flagcdn.com/in.svg" },
+    { name: "UAE", flag: "https://flagcdn.com/ae.svg" },
+    { name: "Australia", flag: "https://flagcdn.com/au.svg" },
+    { name: "Spain", flag: "https://flagcdn.com/es.svg" },
+    { name: "France", flag: "https://flagcdn.com/fr.svg" },
+    { name: "China", flag: "https://flagcdn.com/cn.svg" },
+    { name: "Germany", flag: "https://flagcdn.com/de.svg" },
+    { name: "Japan", flag: "https://flagcdn.com/jp.svg" }
+    
   ];
   return (
-    <div className="px-4 py-8 mt-10 bg-white min-h-screen">
+    <div className="px-10 py-10 mt-10 bg-white ">
       {/* Heading Section */}
       <div className="ml-10 mb-6">
-        <h2 className="text-3xl font-bold text-gray-800">Discover Events By Country</h2>
-        <p className="text-gray-600 text-base">Explore opportunities worldwide</p>
+        <h2 className="text-4xl font-bold text-green-500 ">Discover Events By Country</h2>
+        <p className="text-gray-800 mb-4">Explore opportunities worldwide</p>
       </div>
 
       {/* Countries Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 px-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 px-9">
         {countries.map((country, index) => (
           <div
             key={index}
