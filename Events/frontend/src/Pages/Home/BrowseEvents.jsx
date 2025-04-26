@@ -230,6 +230,7 @@ import Bandenburger from "../../assets/images/Brandenburger.jpeg";
 import Eiffel from "../../assets/images/Tour_Eiffel.jpg";
 import Liberty from "../../assets/images/Statue-of-Liberty.jpeg";
 import Tokyo from "../../assets/images/Tokyo_Tower_and_around_Skyscrapers.jpg";
+import OperaHouse from "../../assets/images/OperaHouse.jpg"
 
 const BrowseEvents = () => {
   const allCities = [
@@ -259,7 +260,7 @@ const BrowseEvents = () => {
     },
     { 
       name: "Sydney", 
-      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/40/Sydney_Opera_House_Sails.jpg"
+      imageUrl: OperaHouse
     },
     { 
       name: "Toronto", 
