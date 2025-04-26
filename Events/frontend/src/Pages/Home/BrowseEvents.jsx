@@ -230,7 +230,8 @@ import Bandenburger from "../../assets/images/Brandenburger.jpeg";
 import Eiffel from "../../assets/images/Tour_Eiffel.jpg";
 import Liberty from "../../assets/images/Statue-of-Liberty.jpeg";
 import Tokyo from "../../assets/images/Tokyo_Tower_and_around_Skyscrapers.jpg";
-import OperaHouse from "../../assets/images/OperaHouse.jpg"
+import OperaHouse from "../../assets/images/OperaHouse.jpg";
+import RogerTowers from "../../assets/images/rogers-tower.jpg"
 
 const BrowseEvents = () => {
   const allCities = [
@@ -264,7 +265,7 @@ const BrowseEvents = () => {
     },
     { 
       name: "Toronto", 
-      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/d/d3/CN_Tower_from_front_of_Rogers_Centre.jpg"
+      imageUrl: RogerTowers
     },
     { 
       name: "Rome", 
