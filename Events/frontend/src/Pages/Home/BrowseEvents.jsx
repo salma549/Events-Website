@@ -252,6 +252,10 @@ const BrowseEvents = () => {
       imageUrl: Bandenburger
     },
     { 
+      name: "Sydney", 
+      imageUrl: OperaHouse
+    },
+    { 
       name: "Paris", 
       imageUrl: Eiffel
     },
@@ -263,10 +267,7 @@ const BrowseEvents = () => {
       name: "Tokyo", 
       imageUrl: Tokyo
     },
-    { 
-      name: "Sydney", 
-      imageUrl: OperaHouse
-    },
+   
     { 
       name: "Toronto", 
       imageUrl: RogerTowers
@@ -291,44 +292,47 @@ const BrowseEvents = () => {
 
   const [showMore, setShowMore] = useState(false);
   const displayedCities = showMore ? allCities : allCities.slice(0, 4);
-
   return (
-    <div className="p-4">
-      <div className="py-7">
-        <h2 className="text-4xl font-bold text-green-500 ml-10">
+    <div className="p-6 bg-gray-100 ml-10 mr-10  rounded-tl-xl">
+      <div className="max-w-7xl mx-auto py-10">
+        <h2 className="text-4xl font-bold text-green-500">
           Browse Events By City
         </h2>
-        <p className="text-gray-800 mb-4 ml-10">
-          Explore opportunities By Cities
+        <p className="text-gray-800 mb-4">
+          Discover amazing opportunities around the world
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ml-10 bg-white p-10 sm:p-6 rounded-lg shadow-md">
+  
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 hover:cursor-pointer">
           {displayedCities.map((city) => (
             <div
               key={city.name}
-              className="bg-gray-200 w-56 h-64 flex flex-col justify-center items-center rounded-lg shadow-lg hover:cursor-pointer overflow-hidden"
+              className="relative bg-white rounded-3xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-500 group"
             >
-              <img 
-                src={city.imageUrl} 
-                alt={city.name} 
-                className="w-full h-40 object-cover rounded-t-lg"
-              />
-              <h3 className="mt-4 text-lg font-semibold text-gray-800">
-                {city.name}
-              </h3>
+              <div className="w-full h-56 overflow-hidden">
+                <img 
+                  src={city.imageUrl} 
+                  alt={city.name}
+                  className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                />
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4 opacity-0 group-hover:opacity-100 transition duration-500">
+                <h3 className="text-xl font-semibold text-center">{city.name}</h3>
+              </div>
             </div>
           ))}
         </div>
-        <div className="flex justify-center mt-6">
+  
+        <div className="flex justify-center mt-14">
           <button
-            className="text-green-500 font-semibold text-lg hover:underline"
+            className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300"
             onClick={() => setShowMore(!showMore)}
           >
-            {showMore ? "Show Less ↑" : "More →"}
+            {showMore ? "Show Less ↑" : "Explore More →"}
           </button>
         </div>
       </div>
     </div>
   );
-};
-
+  
+}
 export default BrowseEvents;
