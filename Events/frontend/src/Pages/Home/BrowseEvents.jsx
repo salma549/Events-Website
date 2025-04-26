@@ -228,6 +228,9 @@ import towerBridge from "../../assets/images/tower-bridge-london.jpeg";
 import BurjKhalifa from "../../assets/images/Burj-Khalifa.jpeg";
 import Bandenburger from "../../assets/images/Brandenburger.jpeg";
 import Eiffel from "../../assets/images/Tour_Eiffel.jpg";
+import Liberty from "../../assets/images/Statue-of-Liberty.jpeg";
+import Tokyo from "../../assets/images/Tokyo_Tower_and_around_Skyscrapers.jpg";
+
 const BrowseEvents = () => {
   const allCities = [
     { 
@@ -248,11 +251,11 @@ const BrowseEvents = () => {
     },
     { 
       name: "New York", 
-      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/a/a1/Statue_of_Liberty_7.jpg"
+      imageUrl: Liberty
     },
     { 
       name: "Tokyo", 
-      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/5e/Tokyo_Tower_and_around_Skyscrapers.jpg"
+      imageUrl: Tokyo
     },
     { 
       name: "Sydney", 
