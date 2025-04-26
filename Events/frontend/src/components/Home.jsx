@@ -156,9 +156,43 @@
 import React from "react";
 import HeroImage from "../assets/images/bg2.jpeg";
 import CategorySection from "../Pages/Home/Category";
-import FeaturedEvents from "../Pages/Home/FeaturedEvents";
 import BrowseEvents from "../Pages/Home/BrowseEvents";
 import Countries from "../Pages/Home/Countries";
+import CurrentEvents from "../Pages/Home/CurrentEvents";
+import UpcomingEvents from "../Pages/Home/UpcommingEvents";
+
+const events = [
+  { title: 'Hong Toys & Games', date: 'Mon, 06 - Thu, 09 Jan 2025', location: 'Hongkong, China', month: 0, url: 'https://www.hktdc.com/event/hktoyfair/en/' },
+  { title: 'Summit For Clinical Ops', date: 'Mon, 06 - Thu, 09 Jan 2025', location: 'Orlando, USA', month: 0, url: 'https://www.clinicaloperationseast.com/' },
+  { title: 'Texworld Apparel', date: 'Mon, 06 - Thu, 09 Jan 2025', location: 'Paris, France', month: 0, url: 'https://texworld-paris.fr.messefrankfurt.com/paris/en.html' },
+  { title: 'Mobile World Congress', date: 'Mon, 24 - Thu, 27 Feb 2025', location: 'Barcelona, Spain', month: 1, url: 'https://www.mwcbarcelona.com/' },
+  { title: 'Berlin Design Week', date: 'Wed, 19 - Sun, 23 Feb 2025', location: 'Berlin, Germany', month: 1, url: 'https://berlindesignweek.com/' },
+  { title: 'Game Developers Conference', date: 'Mon, 17 - Fri, 21 Mar 2025', location: 'San Francisco, USA', month: 2, url: 'https://gdconf.com/' },
+  { title: 'SXSW Conference & Festival', date: 'Fri, 07 - Sun, 16 Mar 2025', location: 'Austin, USA', month: 2, url: 'https://www.sxsw.com/' },
+  { title: 'Holi Festival', date: 'Thu, 06 Mar 2025', location: 'Various Locations, India', month: 2, url: 'https://www.holifestival.org/' },
+  { title: 'London Book Fair', date: 'Tue, 08 - Thu, 10 Apr 2025', location: 'London, UK', month: 3, url: 'https://www.londonbookfair.co.uk/' },
+  { title: 'Salone del Mobile', date: 'Tue, 15 - Sun, 21 Apr 2025', location: 'Milan, Italy', month: 3, url: 'https://www.salonemilano.it/en' },
+  { title: 'IPL Opening Ceremony', date: 'Sat, 06 - Mon, 08 Apr 2025', location: 'Mumbai, India', month: 3, url: 'https://www.iplt20.com/' },
+  { title: 'Cannes Film Festival', date: 'Tue, 13 - Sat, 24 May 2025', location: 'Cannes, France', month: 4, url: 'https://www.festival-cannes.com/en/' },
+  { title: 'Chelsea Flower Show', date: 'Tue, 20 - Sat, 24 May 2025', location: 'London, UK', month: 4, url: 'https://www.rhs.org.uk/shows-events/rhs-chelsea-flower-show' },
+  { title: 'E3 Expo', date: 'Tue, 10 - Thu, 12 Jun 2025', location: 'Los Angeles, USA', month: 5, url: 'https://e3expo.com/' },
+  { title: 'Bonnaroo Music & Arts Festival', date: 'Thu, 12 - Sun, 15 Jun 2025', location: 'Manchester, USA', month: 5, url: 'https://www.bonnaroo.com/' },
+  { title: 'Comic-Con International', date: 'Thu, 24 - Sun, 27 Jul 2025', location: 'San Diego, USA', month: 6, url: 'https://www.comic-con.org/' },
+  { title: 'Glastonbury Festival', date: 'Wed, 25 - Sun, 29 Jul 2025', location: 'Pilton, UK', month: 6, url: 'https://www.glastonburyfestivals.co.uk/' },
+  { title: 'Edinburgh Festival Fringe', date: 'Fri, 02 - Mon, 26 Aug 2025', location: 'Edinburgh, UK', month: 7, url: 'https://www.edfringe.com/' },
+  { title: 'Notting Hill Carnival', date: 'Sun, 25 - Mon, 26 Aug 2025', location: 'London, UK', month: 7, url: 'https://www.nhcarnival.org/' },
+  { title: 'IFA Consumer Electronics Show', date: 'Fri, 05 - Wed, 10 Sep 2025', location: 'Berlin, Germany', month: 8, url: 'https://b2b.ifa-berlin.com/' },
+  { title: 'New York Fashion Week', date: 'Thu, 12 - Wed, 18 Sep 2025', location: 'New York, USA', month: 8, url: 'https://nyfw.com/' },
+  { title: 'Paris Fashion Week', date: 'Mon, 23 - Tue, 01 Oct 2025', location: 'Paris, France', month: 9, url: 'https://fhcm.paris/en/paris-fashion-week-en/' },
+  { title: 'Frankfurt Book Fair', date: 'Wed, 16 - Sun, 20 Oct 2025', location: 'Frankfurt, Germany', month: 9, url: 'https://www.buchmesse.de/en' },
+  { title: 'Mysuru Dasara Festival', date: 'Thu, 10 - Fri, 18 Oct 2025', location: 'Mysuru, India', month: 9, url: 'https://www.mysoredasara.gov.in/' },
+  { title: 'Dubai Expo', date: 'Tue, 12 - Sat, 16 Nov 2025', location: 'Dubai, UAE', month: 10, url: 'https://www.expo2020dubai.com/' },
+  { title: 'Web Summit', date: 'Mon, 04 - Thu, 07 Nov 2025', location: 'Lisbon, Portugal', month: 10, url: 'https://websummit.com/' },
+  { title: 'Art Basel Miami Beach', date: 'Thu, 04 - Sun, 07 Dec 2025', location: 'Miami, USA', month: 11, url: 'https://www.artbasel.com/miami-beach' },
+  { title: 'Festival of Lights', date: 'Sat, 14 - Sun, 15 Dec 2025', location: 'Lyon, France', month: 11, url: 'https://www.fetedeslumieres.lyon.fr/en' },
+];
+
+
 
 const Home = () => {
   return (
@@ -199,12 +233,15 @@ const Home = () => {
         </div>
       </div>
 
+      <CurrentEvents events={events} />
       <Countries />
       <BrowseEvents />
 
 
       <CategorySection />
-      <FeaturedEvents />
+     
+      <UpcomingEvents events={events} />
+    
      
     </>
   );
