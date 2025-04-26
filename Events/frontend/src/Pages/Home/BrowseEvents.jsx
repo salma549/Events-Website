@@ -232,7 +232,8 @@ import Liberty from "../../assets/images/Statue-of-Liberty.jpeg";
 import Tokyo from "../../assets/images/Tokyo_Tower_and_around_Skyscrapers.jpg";
 import OperaHouse from "../../assets/images/OperaHouse.jpg";
 import RogerTowers from "../../assets/images/rogers-tower.jpg"
-import Colosseo from "../../assets/images/Colosseo.jpg"
+import Colosseo from "../../assets/images/Colosseo.jpg";
+import Sagrada from "../../assets/images/Sagrada-Familia.jpg"
 
 const BrowseEvents = () => {
   const allCities = [
@@ -274,7 +275,7 @@ const BrowseEvents = () => {
     },
     { 
       name: "Barcelona", 
-      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/45/Sagrada_Familia_01.jpg"
+      imageUrl: Sagrada
     },
     { 
       name: "Istanbul", 
