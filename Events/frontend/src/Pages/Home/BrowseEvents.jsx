@@ -233,7 +233,9 @@ import Tokyo from "../../assets/images/Tokyo_Tower_and_around_Skyscrapers.jpg";
 import OperaHouse from "../../assets/images/OperaHouse.jpg";
 import RogerTowers from "../../assets/images/rogers-tower.jpg"
 import Colosseo from "../../assets/images/Colosseo.jpg";
-import Sagrada from "../../assets/images/Sagrada-Familia.jpg"
+import Sagrada from "../../assets/images/Sagrada-Familia.jpg";
+import Istanbul from "../../assets/images/Istanbul.jpg";
+import Merlion from "../../assets/images/merlion.jpg";
 
 const BrowseEvents = () => {
   const allCities = [
@@ -279,11 +281,11 @@ const BrowseEvents = () => {
     },
     { 
       name: "Istanbul", 
-      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/6/6e/Blue_Mosque%2C_Istanbul_September_2008_crop.jpg"
+      imageUrl: Istanbul
     },
     { 
       name: "Singapore", 
-      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/3/3e/Merlion_Singapore_Marina_Bay.jpg"
+      imageUrl: Merlion
     },
   ];
 
