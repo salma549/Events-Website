@@ -232,6 +232,7 @@ import Liberty from "../../assets/images/Statue-of-Liberty.jpeg";
 import Tokyo from "../../assets/images/Tokyo_Tower_and_around_Skyscrapers.jpg";
 import OperaHouse from "../../assets/images/OperaHouse.jpg";
 import RogerTowers from "../../assets/images/rogers-tower.jpg"
+import Colosseo from "../../assets/images/Colosseo.jpg"
 
 const BrowseEvents = () => {
   const allCities = [
@@ -269,7 +270,7 @@ const BrowseEvents = () => {
     },
     { 
       name: "Rome", 
-      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/d/d2/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg"
+      imageUrl: Colosseo
     },
     { 
       name: "Barcelona", 
