@@ -6,19 +6,20 @@ import Home from './components/Home';
 import EducationPage from './components/Categories/Education.jsx';
 import Medical from './components/Categories/Medical.jsx';
 import IT from './components/Categories/IT.jsx';
-import Banking from './components/Categories/Banking.jsx';
+// import Banking from './components/Categories/Banking.jsx';
 import Business from './components/Categories/Business.jsx';
 import IndustrialEngineering from './components/Categories/IndustrialEngineering.jsx';
 import Entertainment from './components/Categories/Entertainment.jsx';
 import Building from './components/Categories/Building.jsx';
 import Power from './components/Categories/Power.jsx';
-import ScienceReach from './components/Categories/ScienceReach.jsx';
+import ScienceReach from './components/Categories/ScienceResearch.jsx';
 import Health from './components/Categories/Health.jsx';
 import Agriculture from './components/Categories/Agriculture.jsx';
-import Food from './components/Categories/Food.jsx';
+// import Food from './components/Categories/Food.jsx';
 import Arts from './components/Categories/Arts.jsx';
 import Logistics from './components/Categories/Logistics.jsx';
 import Automotive from './components/Categories/Automotive.jsx';
+import Electronics from './components/Categories/Electronics.jsx';
 import Fashion from './components/Categories/Fashion.jsx';
 import Office from './components/Categories/Office.jsx';
 import Clothing from './components/Categories/Clothing.jsx';
@@ -44,18 +45,19 @@ const App = () => {
         <Route path="/education" element={<EducationPage category="Education" />} />
         <Route path="/medical" element={<Medical category="Medical" />} />
         <Route path="/it" element={<IT category="IT"/>} />
-        <Route path="/banking" element={<Banking category="Banking"/>} />
+        {/* <Route path="/banking" element={<Banking category="Banking"/>} /> */}
         <Route path="/business" element={<Business category="Business"/>} />
         <Route path="/engineering" element={<IndustrialEngineering category="Industrial Engineering"/>} />
         <Route path="/entertainment" element={<Entertainment category="Entertainment"/>} />
         <Route path="/construction" element={<Building category="Building"/>} />
         <Route path="/energy" element={<Power category="Power"/>} />
-        <Route path="/science" element={<ScienceReach category="Science Reach"/>} />
+        <Route path="/science" element={<ScienceReach category="Science Research"/>} />
         <Route path="/wellness" element={<Health category="Health"/>} />
         <Route path="/agriculture" element={<Agriculture category="Agriculture"/>} />
-        <Route path="/food" element={<Food category="Food"/>} />
+        {/* <Route path="/food" element={<Food category="Food&Beverages"/>} /> */}
         <Route path="/arts" element={<Arts category="Arts"/>} />
         <Route path="/logistics" element={<Logistics category="Logistics"/>} />
+        <Route path="/electronics" element={<Electronics category="Electronics"/>} />
         <Route path="/automotive" element={<Automotive category="Automotive"/>} />
         <Route path="/fashion" element={<Fashion category="Fashion"/>} />
         <Route path="/home" element={<Office category="Home"/>} />

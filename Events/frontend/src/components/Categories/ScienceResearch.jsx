@@ -1,26 +1,13 @@
 import React, { useState, useEffect } from "react";
 
-const Packing = ({ category }) => {
+const ScienceResearch = ({ category }) => {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Helper function to format date strings (same as your original Food code)
-  const formatDate = (dateString) => {
-    if (!dateString) return "";
-    const date = new Date(dateString);
-    return date.toLocaleDateString("en-GB", {
-      day: "2-digit",
-      month: "long",
-      year: "numeric",
-    });
-  };
-
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        setLoading(true);
-        setError(null);
         const response = await fetch(`http://localhost:5000/api/events?category=${category}`);
         if (!response.ok) {
           throw new Error("Failed to fetch events");
@@ -54,15 +41,12 @@ const Packing = ({ category }) => {
           {events.map((event) => (
             <li
               key={event._id}
-              className="relative p-6 rounded-[30px] bg-blue-100 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-103 hover:cursor-pointer"
+              className="relative p-6 rounded-[30px] bg-blue-100 shadow-lg  hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-103 hover:cursor-pointer"
             >
               {/* Top Wave */}
               <div className="absolute -top-5 left-0 w-full h-12 bg-blue-400 rounded-t-[30px]">
                 <svg className="w-full h-full" viewBox="0 0 1440 320" preserveAspectRatio="none">
-                  <path
-                    fill="white"
-                    d="M0,128L60,160C120,192,240,256,360,250.7C480,245,600,171,720,144C840,117,960,139,1080,170.7C1200,203,1320,245,1380,266.7L1440,288V0H0Z"
-                  ></path>
+                  <path fill="white" d="M0,128L60,160C120,192,240,256,360,250.7C480,245,600,171,720,144C840,117,960,139,1080,170.7C1200,203,1320,245,1380,266.7L1440,288V0H0Z"></path>
                 </svg>
               </div>
 
@@ -71,8 +55,7 @@ const Packing = ({ category }) => {
                 <h3 className="text-xl font-bold text-gray-900 mb-6">{event.name}</h3>
 
                 <p className="text-gray-600 mb-6 text-lg">
-                  📍 {event.location} <br /> 📅 {formatDate(event.startDate)}
-                  {event.endDate ? ` to ${formatDate(event.endDate)}` : ""}
+                  📍 {event.location} <br /> 📅 {new Date(event.date).toLocaleDateString()}
                 </p>
 
                 <p className="text-gray-700 mb-8">{event.description}</p>
@@ -88,7 +71,7 @@ const Packing = ({ category }) => {
                 </a>
               </div>
 
-              {/* Optional Bottom Wave, uncomment if you want */}
+              {/* Bottom Wave */}
               {/* <div className="absolute -bottom-5 left-0 w-full h-12 bg-blue-400 rounded-b-[30px]">
                 <svg className="w-full h-full" viewBox="0 0 1440 320" preserveAspectRatio="none">
                   <path fill="white" d="M0,288L60,266.7C120,245,240,203,360,170.7C480,139,600,117,720,144C840,171,960,245,1080,250.7C1200,256,1320,192,1380,160L1440,128V320H0Z"></path>
@@ -102,4 +85,4 @@ const Packing = ({ category }) => {
   );
 };
 
-export default Packing;
+export default ScienceResearch;
